@@ -1,0 +1,23 @@
+<nav>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/login" routerLinkActive="active">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/city" routerLinkActive="active">Add City</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/city/edit/:id" routerLinkActive="active">Update City</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/city/delete/:id" routerLinkActive="active">Delete City</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()" style="cursor:pointer">Logout</a>
+    </li>
+  </ul>     
+</nav>
+<div class="container" >
+  <router-outlet (activate)="checkLoggedInUser">      
+    </router-outlet>
+</div>
